@@ -1,0 +1,36 @@
+[data-scroll-anim].scrollAnim,[data-scroll-anim] .scrollAnim{
+    opacity: 0;
+}
+
+[data-scroll-anim].scrollAnim.scrollAnimLeft,[data-scroll-anim] .scrollAnim.scrollAnimLeft{
+    transform: translateX(-80%);
+}
+
+[data-scroll-anim].scrollAnim.scrollAnimRight,[data-scroll-anim] .scrollAnim.scrollAnimRight{
+    transform: translateX(80%);
+}
+
+[data-scroll-anim].scrollAnim.scrollAnimTop,[data-scroll-anim] .scrollAnim.scrollAnimTop{
+    transform: translateY(-200%);
+}
+
+[data-scroll-anim].scrollAnim.scrollAnimBottom,[data-scroll-anim] .scrollAnim.scrollAnimBottom{
+    transform: translateY(200%);
+}
+
+[data-scroll-anim].scrollAnim.scrollAnimActive,[data-scroll-anim].scrollAnimActive .scrollAnim{
+    opacity: 1;
+    transform: translate(0%);
+    transition: transform 1s,opacity 1.5s;
+}
+
+[data-scroll-anim].scrollAnimActive.scrollAnimLadder .scrollAnim,
+[data-scroll-anim].scrollAnimActive .scrollAnimLadder .scrollAnim
+{
+    @include for(all,1.2s);
+}
+
+[data-scroll-anim].scrollAnim.scrollAnimActive.scrollAnimDelay,
+[data-scroll-anim].scrollAnimActive .scrollAnim.scrollAnimDelay{
+    transition-delay: 0.1s;
+}
