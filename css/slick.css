@@ -13,7 +13,10 @@
 }
 
 @media only screen and (max-width: 768px){
-    .slick-slider{height: 100%;}
+   .slick-slider{
+       height: 100%;
+       position: static;
+   }
 }
 /* Слайдер запущен */
 .slick-slider.slick-initialized{}
